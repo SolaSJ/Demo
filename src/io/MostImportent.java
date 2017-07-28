@@ -213,7 +213,7 @@ public class MostImportent {
 
 			// e.printStackTrace(); e自己調用自己的方法的在控制台输出错误提示。
 			System.out.println(e);// 打印的是错误名称，例如（java.io.FileNotFoundException）
-
+                                  //这里用e.toString（）结果一样
 			StackTraceElement p[] = e.getStackTrace();
 			// e.getStackTrace()得到是上面类型的数组。用一个这样的数组取接收。
 			for (StackTraceElement p1 : p) {
