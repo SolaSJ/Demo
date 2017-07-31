@@ -26,9 +26,9 @@ public class MybufferedInputstream {
 				num = 0;
 				index = 0;
 
-				return b[i]&255;
+				return b[i] & 255;
 			}
-			return b[index++]&255 ;
+			return b[index++] & 255;
 
 		}
 
