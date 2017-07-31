@@ -39,7 +39,7 @@ public class Directory {
 		}
 	}
 
-	// 常见的一些比较
+	// 常见的一些比较int和Integer
 	public void compare() {
 		Integer i1 = 121;
 		Integer i2 = 121;
@@ -52,4 +52,7 @@ public class Directory {
 		System.out.println(i5 == i6);// Integer和int比时会自动拆箱。
 
 	}
+
+
+
 }
