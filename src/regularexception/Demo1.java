@@ -15,7 +15,7 @@ public class Demo1 {
 		// replaphonenum();
 		// getnum();
 		// quchong();
-		 ip();
+//		 ip();
 		
 		
 		String str = "yfcvy67@147.com";
