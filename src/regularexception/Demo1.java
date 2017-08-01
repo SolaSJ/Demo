@@ -167,18 +167,18 @@ public class Demo1 {
 		String str = "192.168.15.10  127.0.0.1  3.3.3.3  105.77.11.55";
 		String str2 = "(\\d+)";
 
-		String news0 = str.replaceAll(str2, "00$1");
-		String news1 = news0.replaceAll("0*(\\d{3})", "$1");
+		 str = str.replaceAll(str2, "00$1");
+		str = str.replaceAll("0*(\\d{3})", "$1");
+		System.out.println(str);
 		String[] s = str.split(" +");
 		TreeSet<String> set = new TreeSet();
 		for (int i = 0; i < 4; i++) {
-			s[i]=s[i].replaceAll("0*(\\d+)", "$1");
 			set.add(s[i]);
-
 		}
+
 		for (String k : set) {
 			
-			System.out.println(k);
+			System.out.println(k.replaceAll("0*(\\d+)", "$1"));
 			
 			
 		
