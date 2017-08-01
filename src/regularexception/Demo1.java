@@ -1,6 +1,7 @@
 package regularexception;
 
 import java.util.Arrays;
+import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -15,9 +16,8 @@ public class Demo1 {
 		// replaphonenum();
 		// getnum();
 		// quchong();
-//		 ip();
-		
-		
+		ip2();
+
 		String str = "yfcvy67@147.com";
 		email(str);
 	}
@@ -46,9 +46,9 @@ public class Demo1 {
 	// 用正则表达式验证qq号码
 	public static void checkqq1(String str) {
 		String regex = "[1-9]\\d{5,13}";
-		// [1-9]第一个数字是0到9，第二个1到9用的\\d,第一个\是用来转译的。{4,13}是代表个数至少4次最多13次
+		// [1-9]第一个数字是0到9，第二个1到9用的\\d,第一个是用来转译的。{4,13}是代表个数至少4次最多13次
 		if (str.matches(regex)) {
-			System.out.println("您输入的 正好");
+			System.out.println("您输入的 正好");    
 		} else {
 			System.out.println("您输入的不正确");
 		}
@@ -140,6 +140,7 @@ public class Demo1 {
 	// IP排序
 	public static void ip() {
 		String str = "192.168.15.10  127.0.0.1  3.3.3.3  105.77.11.55";
+
 		String[] s = str.split(" +");
 		String[] s00 = s[0].split("\\.");
 		String[] s11 = s[1].split("\\.");
@@ -159,6 +160,30 @@ public class Demo1 {
 				}
 			}
 		}
+	}
+
+	// IP排序2
+	public static void ip2() {
+		String str = "192.168.15.10  127.0.0.1  3.3.3.3  105.77.11.55";
+		String str2 = "(\\d+)";
+
+		String news0 = str.replaceAll(str2, "00$1");
+		String news1 = news0.replaceAll("0*(\\d{3})", "$1");
+		String[] s = str.split(" +");
+		TreeSet<String> set = new TreeSet();
+		for (int i = 0; i < 4; i++) {
+			s[i]=s[i].replaceAll("0*(\\d+)", "$1");
+			set.add(s[i]);
+
+		}
+		for (String k : set) {
+			
+			System.out.println(k);
+			
+			
+		
+		}
+
 	}
 
 	// 邮箱校准
