@@ -16,6 +16,8 @@ public class Demo1 {
 		// getnum();
 		// quchong();
 		// ip();
+		
+		¶î·ç¸ñ
 		String str = "yfcvy67@147.com";
 		email(str);
 	}
