@@ -40,6 +40,7 @@ public class Mergesort {
 	            // ×óÓÒ¹é²¢
 	            merge(a, low, mid, high);
 	            System.out.println(Arrays.toString(a));
+	            
 	        }
 
 	    }
