@@ -37,7 +37,7 @@ public class Mergesort {
 	            mergeSort(a, low, mid);
 	            // 右边
 	            mergeSort(a, mid + 1, high);
-	            // 左右归并
+	            // 左右归并合集
 	            merge(a, low, mid, high);
 	            System.out.println(Arrays.toString(a));
 	            
