@@ -49,5 +49,25 @@ public class Mergesort {
 	        int a[] = { 51, 46, 20, 18, 65, 97, 82, 30, 77, 50 };
 	        mergeSort(a, 0, a.length - 1);
 	        System.out.println("排序结果：" + Arrays.toString(a));
+	        add();
+	    }
+	
+	    //求100到200的所有素数的和。
+	    public static void add(){
+	    	int num=0;
+	    	int k=0;
+	    	for(int i=100;i<201;i++){
+	    		for(int j=2;j<i;j++){//for(int j=2;j<=Math.sqrt(i);j++)这里用的开平方确定需要判定的最大值。非常巧妙，不仅减少了运算量还充分利用了质数的特点。
+	    			if(i%j==0){
+	    				k=0;
+	    				break;
+	    			}
+	    			k=i;
+	    		}
+	    		if(k!=0)
+	    		System.out.print(k+"  ");
+	    	num+=k;	
+	    	}
+	    	System.out.println(num);
 	    }
 }
