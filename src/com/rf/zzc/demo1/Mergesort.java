@@ -50,6 +50,7 @@ public class Mergesort {
 		mergeSort(a, 0, a.length - 1);
 		System.out.println("排序结果：" + Arrays.toString(a));
 		add();
+		add2();
 	}
 
 	// 求100到200的所有素数的和。
@@ -70,5 +71,28 @@ public class Mergesort {
 			num += k;
 		}
 		System.out.println(num);
+	}
+
+	
+	//求1-10000的完数
+	public static void add2() {
+		for (int i = 2; i <= 10000; i++) {
+			int num = 0;
+			for (int j = 1; j <= Math.sqrt(i); j++) {
+				if (j != 1) {
+					if (i % j == 0) {
+						num+= (j + (i / j));
+					}
+				}else{
+					if (i % j == 0) {
+						num+= j ;
+					}
+				}
+			}
+			if (num == i) {
+				System.out.println(i);
+			}
+		}
+
 	}
 }
