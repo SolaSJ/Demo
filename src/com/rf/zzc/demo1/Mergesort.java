@@ -46,7 +46,7 @@ public class Mergesort {
 	    }
 
 	    public static void main(String[] args) {
-	        int a[] = { 51, 46, 20, 18, 65, 97, 82, 30, 77, 50 };
+	        int a[] = { 51, 46, 20, 18, 65, 97, 82, 30,30, 77, 50 };
 	        mergeSort(a, 0, a.length - 1);
 	        System.out.println("ÅÅÐò½á¹û£º" + Arrays.toString(a));
 	    }
