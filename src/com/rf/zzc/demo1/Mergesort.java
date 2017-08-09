@@ -53,6 +53,7 @@ public class Mergesort {
 		System.out.println("排序结果：" + Arrays.toString(a));
 		add();
 		add2();
+		nine91(9, 9);
 	}
 
 	// 求100到200的所有素数的和。
@@ -75,19 +76,18 @@ public class Mergesort {
 		System.out.println(num);
 	}
 
-	
-	//求1-10000的完数
+	// 求1-10000的完数
 	public static void add2() {
 		for (int i = 2; i <= 10000; i++) {
 			int num = 0;
 			for (int j = 1; j <= Math.sqrt(i); j++) {
 				if (j != 1) {
 					if (i % j == 0) {
-						num+= (j + (i / j));
+						num += (j + (i / j));
 					}
-				}else{
+				} else {
 					if (i % j == 0) {
-						num+= j ;
+						num += j;
 					}
 				}
 			}
@@ -96,6 +96,37 @@ public class Mergesort {
 			}
 		}
 
+	}
+
+
+	public static void nine9(int a) {
+		if (a == 1) {
+			System.out.println("1x1=1");
+		} else {
+			nine9(a - 1);
+			for (int i = 1; i <= a; i++) {
+				System.out.print(i + "x" + a + "=" + i * a + "\t");
+			}
+			System.out.println();
+		}
+	}
+
+	public static void nine91(int a, int b) {
+		if (a == 1 && b == 1) {
+			System.out.print("1x1=1" + "\t");
+		} else if (b == 0) {
+			b = a - 1;
+		
+			nine91(a - 1, b);
+			System.out.println();
+		}
+
+		else {
+
+			nine91(a, b - 1);
+			System.out.print(b + "x" + a + "=" + a * b + "\t");
+
+		}
 	}
 
 }
