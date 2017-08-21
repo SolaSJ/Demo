@@ -93,8 +93,7 @@ public class Caozuo {
 		while (true) {
 			System.out.println("请选择 1.取款 2.存款 3.修改密码 4.退出 5.查询");
 			Scanner scan = new Scanner(System.in);
-			String str = scan.next();
-			String i = str;
+			String  i= scan.next();
 			switch (i) {
 			case "1":
 				qukuan(use1);

@@ -7,6 +7,7 @@ public class Class {
 	public static void main(String[] args) {
 		/*
 		 * 对象概念？ 对象的属性特点及方法
+		 * 在这里的类名是Class因为首字母是大写所以不算错
 		 */
 		// 通过关键字new创建一个person对象，创建时调用的是对象对应的构造方法
 		Scanner scan=new Scanner(System.in);
