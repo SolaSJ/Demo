@@ -11,6 +11,8 @@ public class Canlendar {
 		Calendar c=Calendar.getInstance();
 		 c.set(a, b, 1);
 		c.add(Calendar.DAY_OF_MONTH, -1);
+		
+		
 		System.out.println(c.get(Calendar.DAY_OF_MONTH)) ;
 	}
 }
