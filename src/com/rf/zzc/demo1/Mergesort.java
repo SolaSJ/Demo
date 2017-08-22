@@ -112,17 +112,11 @@ public class Mergesort {
 		if (a == 1 && b == 1) {
 			System.out.print("1x1=1" + "\t");
 		} else if (b == 0) {
-			b = a - 1;
-		
-			nine91(a - 1, b);
+			nine91(a - 1, a - 1);
 			System.out.println();
-		}
-
-		else {
-
+		} else {
 			nine91(a, b - 1);
 			System.out.print(b + "x" + a + "=" + a * b + "\t");
-
 		}
 	}
 }
