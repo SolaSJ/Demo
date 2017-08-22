@@ -42,8 +42,10 @@ public class Mergesort {
 			System.out.println(Arrays.toString(a));
 
 		}
-
 	}
+
+
+	  
 
 	public static void main(String[] args) {
 		int a[] = { 51, 46, 20, 18, 65, 97, 82, 30, 77, 50 };
@@ -96,6 +98,7 @@ public class Mergesort {
 
 	}
 
+
 	public static void nine9(int a) {
 		if (a == 1) {
 			System.out.println("1x1=1");
@@ -119,4 +122,5 @@ public class Mergesort {
 			System.out.print(b + "x" + a + "=" + a * b + "\t");
 		}
 	}
+
 }

@@ -42,7 +42,7 @@ public class function {
 		// System.out.print("}");
 		//
 
-		// 二二维数组
+		// 二 二维数组
 		// 例子int[][] arr={{1,2,3},{3,4,5},{6,7,8}};
 		// 其输出4这个数字时应该是system.ou.println(arr[1][1])
 		// System.out.println(" "+" "+" "+" "+"*");
