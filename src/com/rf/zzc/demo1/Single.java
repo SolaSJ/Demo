@@ -11,16 +11,14 @@ public class Single {
 	// }
 	// ¶öººÊ½
 
-	
-	
-	//ÀÁººÊ½  
+	// ÀÁººÊ½
 	private static Single s = null;
 
 	private Single() {
 
 	}
 
-	public  Single getSingle() {
+	public Single getSingle() {
 		if (s == null) {
 			synchronized (Single.class) {
 				if (s == null) {
@@ -30,6 +28,5 @@ public class Single {
 		}
 		return s;
 	}
-	
 
 }
