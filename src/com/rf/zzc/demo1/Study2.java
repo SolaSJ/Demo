@@ -67,19 +67,18 @@ public class Study2 {
 			// String str= JOptionPane.showInputDialog("请输入一个数字")
 			// 字符串转换为int类型
 			// int s=Integer.parseInt(str)
-			
 
 		}
-	
-			for(int i=9;i>0;i--){
-				for(int j=9;j>0;j--){
-					System.out.print(i+"x"+j+"="+(i*j+"\t"));
-					j--;
-					
-				}
-				System.out.println();
-				
+
+		for (int i = 9; i > 0; i--) {
+			for (int j = 9; j > 0; j--) {
+				System.out.print(i + "x" + j + "=" + (i * j + "\t"));
+				j--;
+
 			}
+			System.out.println();
+
+		}
 
 	}
 }

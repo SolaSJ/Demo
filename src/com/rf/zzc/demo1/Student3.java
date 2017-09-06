@@ -107,39 +107,35 @@ public class Student3 {
 
 		} while (b < 10);
 
-		
-		
 		for (int e = 1; e < 10; e++) {
 			for (int f = 1; f < 10; f++) {
 				if (f == 4) {
-					break;//此处为跳出循环而且4这个循环也不执行
-					//如果为continue则只是跳出4这个循环，其他的不影响，后面的也要继续
-				
+					break;// 此处为跳出循环而且4这个循环也不执行
+					// 如果为continue则只是跳出4这个循环，其他的不影响，后面的也要继续
+
 				}
 				System.out.print(e + "x" + f + "=" + (e * f) + "\t");
 
 			}
 			System.out.println();
-			
-		
+
 		}
-		
-			for(int i=9;i>0;i--){
-				for(int j=9;j>=i;j--){
-					System.out.print(j+"x"+i+"="+(i*j+"\t"));
-					
-					
-				}
-				System.out.println();
-				
+
+		for (int i = 9; i > 0; i--) {
+			for (int j = 9; j >= i; j--) {
+				System.out.print(j + "x" + i + "=" + (i * j + "\t"));
+
 			}
-			for(int x=9;x>0;x--){
-				for(int y=x;y>0;y--){
-					System.out.print(x+"x"+y+"="+(x*y)+"\t");	
-				}
-				
-				System.out.println();
+			System.out.println();
+
+		}
+		for (int x = 9; x > 0; x--) {
+			for (int y = x; y > 0; y--) {
+				System.out.print(x + "x" + y + "=" + (x * y) + "\t");
 			}
+
+			System.out.println();
+		}
 	}
 
 }
