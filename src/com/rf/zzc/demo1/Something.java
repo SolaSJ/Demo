@@ -2,6 +2,7 @@
 package com.rf.zzc.demo1;
 
 public class Something {
+	
 	/*
 	 * 字符集和编码： 字符集是字典而编码却是存储方式。 UTF-16 是用定长 16 位（2 字节）来表示的 Unicode 转换格式，通过代理对来访问 BMP
 	 * 之外的字符编码。 UTF-16都是双字节，而UTF-8却是变字节，一般为1~6个字节（英文占一个字节，而中文占三个字节） UTF-16
@@ -110,5 +111,11 @@ public class Something {
 	    String getName(); 
 	}   
 	*/
+	
+	
+	// hashcode是什么，以及什么是散列
+	public void hash() {
+		
+	}
 	
 }
