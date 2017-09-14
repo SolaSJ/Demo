@@ -16,10 +16,14 @@ public class Demo1 {
 		// replaphonenum();
 		// getnum();
 		// quchong();
-		ip2();
-
-		String str = "yfcvy67@147.com";
-		email(str);
+//		ip2();
+//		String str = "yfcvy67@147.com";
+//		email(str);
+		notmove();
+		intrude();
+		
+		
+		
 	}
 
 	// 一般方法验证qq号码
@@ -48,7 +52,7 @@ public class Demo1 {
 		String regex = "[1-9]\\d{5,13}";
 		// [1-9]第一个数字是0到9，第二个1到9用的\\d,第一个是用来转译的。{4,13}是代表个数至少4次最多13次
 		if (str.matches(regex)) {
-			System.out.println("您输入的 正好");    
+			System.out.println("您输入的 正好");
 		} else {
 			System.out.println("您输入的不正确");
 		}
@@ -86,7 +90,8 @@ public class Demo1 {
 		String str = "zhangsanyyyylisi888888wangwu";
 		// String[] names = str.split("\\.");//.在正则中表示特殊符号，所以需要转译
 		String[] names = str.split("(.)\\1+");
-		// (.)代表一个组，里面的的.代表任意一个字符，而\\1表示和这个组相同的组，+表示一串连续的字符组串
+		// (.)代表一个组，里面的的.代表任意一个字符，而\\1表示和这个组相同的组，+表示一串连续的字符组串（至少出现一次即{1，}），
+		// 如果是？则是代表前面的原子出现0次或者1次即{0,1}
 		for (String name : names) {
 			System.out.print(name);
 		}
@@ -167,7 +172,7 @@ public class Demo1 {
 		String str = "192.168.15.10  127.0.0.1  3.3.3.3  105.77.11.55";
 		String str2 = "(\\d+)";
 
-		 str = str.replaceAll(str2, "00$1");
+		str = str.replaceAll(str2, "00$1");
 		str = str.replaceAll("0*(\\d{3})", "$1");
 		System.out.println(str);
 		String[] s = str.split(" +");
@@ -177,11 +182,9 @@ public class Demo1 {
 		}
 
 		for (String k : set) {
-			
+
 			System.out.println(k.replaceAll("0*(\\d+)", "$1"));
-			
-			
-		
+
 		}
 
 	}
@@ -196,4 +199,53 @@ public class Demo1 {
 		}
 	}
 
+	// 贪婪模式
+	public static void greedy() {// 贪婪的
+
+		String t = "aaaa8aab8bbbb6a";
+		Pattern p = Pattern.compile("(.{3,10})[0-9]");//规定正则表达式。用此方法
+		Matcher m = p.matcher(t);//正则表达式匹配字符串
+		System.out.println("===贪婪模式===");
+		// 贪婪模式特点：(最大匹配)一次性地读入整个字符串，如果不匹配就吐掉最右边的一个字符，继续运行，当得到所要字符串后指针变动，此处第一次得到后指针变到5
+		while (m.find()) {
+			System.out.println("开始" + m.start());// 返回匹配的值
+			System.out.println(m.group());//输出指针开始位置
+			System.out.println("结束" + m.end());//输出指针结束位置
+
+		}
+	}
+	
+	public static void notmove() {
+
+		String t = "aaaa8aab8bbbb6a";
+		Pattern p = Pattern.compile("(.{3,10}?)[0-9]");//规定正则表达式。用此方法
+		Matcher m = p.matcher(t);//正则表达式匹配字符串
+		System.out.println("===懒动模式===");
+		// 懒动模式特点：从左到右，从0开始每次都多读一个字符，读到所需后，指针变动，继续前面动作，直到读完所有匹配的字符串。
+		while (m.find()) {
+			System.out.println("开始" + m.start());// 返回匹配的值
+			System.out.println(m.group());//输出指针开始位置
+			System.out.println("结束" + m.end());//输出指针结束位置
+
+		}
+	}
+	
+	public static void intrude() {//侵入
+
+		String t = "aaa8aaab8bbbb86a";
+		Pattern p = Pattern.compile("(.{3,10}+)[0-9]");//规定正则表达式。用此方法
+		Matcher m = p.matcher(t);//正则表达式匹配字符串
+		System.out.println("===侵入模式===");
+		//最大匹配
+		// 侵入模式特点：在这里，相当于3没起效果，限定位数的数字是10，所以找的结果就只有a8aab8bbbb6。
+		
+		while (m.find()) {
+			System.out.println("开始" + m.start());// 返回匹配的值
+			System.out.println(m.group());//输出指针开始位置
+			System.out.println("结束" + m.end());//输出指针结束位置
+
+		}
+	}
+	
+	
 }
